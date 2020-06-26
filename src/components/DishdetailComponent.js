@@ -71,9 +71,11 @@ class DishDetail extends Component {
     const dishComment = this.renderComments(selectedDish.comments);
 
     return (
-      <div className="row">
-        {dish}
-        {dishComment}
+      <div className="container">
+        <div className="row">
+          {dish}
+          {dishComment}
+        </div>
       </div>
     );
   }
