@@ -248,23 +248,7 @@ export const postFeedback = (
     .then((response) => {
       dispatch(addFeedback(response));
       console.log(response);
-      alert(
-        "Thank You for you feedback!" +
-          "firstname:" +
-          response.firstname +
-          "lastname:" +
-          response.lastname +
-          "email:" +
-          response.email +
-          "telnum:" +
-          response.telnum +
-          "agree:" +
-          response.agree +
-          "message:" +
-          response.message +
-          "id:" +
-          response.id
-      );
+      alert(JSON.stringify(response));
     })
     .catch((error) => {
       dispatch(feedbackFailed(error));
